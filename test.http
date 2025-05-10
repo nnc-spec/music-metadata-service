@@ -1,0 +1,13 @@
+### Yeni sanatçı ekle
+POST http://localhost:8080/artists
+Content-Type: application/json
+
+{
+  "name": "Coldplay"
+}
+
+### Sanatçının parçalarını getir (örnek UUID ile değiştir)
+GET http://localhost:8080/tracks/by-artist/123e4567-e89b-12d3-a456-426614174000
+
+### Artist of the day
+GET http://localhost:8080/artist-of-the-day
