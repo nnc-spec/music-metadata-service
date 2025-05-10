@@ -132,3 +132,39 @@ postman/
 > - Edit Artist Name
 > - Fetch Artist Tracks
 > - Artist of the Day  
+
+
+---
+
+## Running with Docker (Clean Setup)
+
+If you cloned this project from GitHub and see an error like `JAR file not found` during Docker build, please follow these steps:
+
+### Prerequisites
+
+- Docker Desktop installed and running
+- Java 17 and Maven installed on your machine
+
+### Step 1: Build the JAR file locally
+
+```bash
+./mvnw clean package
+```
+
+This will generate the JAR file in the `target/` directory:
+```
+target/music-metadata-service-0.0.1-SNAPSHOT.jar
+```
+
+### Step 2: Build Docker image manually
+
+```bash
+docker-compose up --build
+```
+
+The service will be available at:  
+[http://localhost:8080](http://localhost:8080)
+
+###Step 4: Test the API
+
+Use Postman or cURL to interact with the API. A Postman collection is available under the `postman/` directory.
