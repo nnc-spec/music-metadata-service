@@ -1,7 +1,7 @@
-
 # Music Metadata Service
 
-This is a RESTful service for managing metadata of music tracks and artists. The project uses Spring Boot, JPA (Hibernate), and PostgreSQL, and is containerized with Docker for production-like deployment.
+This is a RESTful service for managing metadata of music tracks and artists. The project uses Spring Boot, JPA (
+Hibernate), and PostgreSQL, and is containerized with Docker for production-like deployment.
 
 ## Features
 
@@ -50,6 +50,7 @@ docker-compose up --build
 ```
 
 This command will:
+
 - Build the Spring Boot application into a Docker image
 - Start a PostgreSQL container (`db`) on port `5432`
 - Start the application container (`app`) on port `8080`
@@ -114,7 +115,6 @@ mvn test
 ---
 
 This setup ensures consistent behavior across environments and makes the application easier to deploy in production.
-
 
 ## API Documentation & Testing
 

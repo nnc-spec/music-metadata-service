@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/artist-of-the-day")
 public class ArtistOfTheDayController {
 
-  private final ArtistOfTheDayService artistOfTheDayService;
+    private final ArtistOfTheDayService artistOfTheDayService;
 
-  public ArtistOfTheDayController(ArtistOfTheDayService artistOfTheDayService) {
-    this.artistOfTheDayService = artistOfTheDayService;
-  }
+    public ArtistOfTheDayController(ArtistOfTheDayService artistOfTheDayService) {
+        this.artistOfTheDayService = artistOfTheDayService;
+    }
 
-  @GetMapping
-  public ResponseEntity<ArtistResponse> getArtistOfTheDay() {
-    ArtistResponse artistOfTheDay = artistOfTheDayService.getArtistOfTheDay();
-    return ResponseEntity.ok(artistOfTheDay);
-  }
+    @GetMapping
+    public ResponseEntity<ArtistResponse> getArtistOfTheDay() {
+        ArtistResponse artistOfTheDay = artistOfTheDayService.getArtistOfTheDay();
+        return ResponseEntity.ok(artistOfTheDay);
+    }
 }
