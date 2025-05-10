@@ -43,9 +43,27 @@ src
 
 ## How to Run with Docker
 
-### 1. Build and start the application with Docker Compose
+If you cloned this project from GitHub and see an error like `JAR file not found` during Docker build, please follow these steps:
 
+### Prerequisites
+
+- Docker Desktop installed and running
+- Java 17 and Maven installed on your machine
+
+### Step 1: Build the JAR file locally
+
+```bash
+./mvnw clean package
 ```
+
+This will generate the JAR file in the `target/` directory:
+```
+target/music-metadata-service-0.0.1-SNAPSHOT.jar
+```
+
+### Step 2: Build Docker image manually
+
+```bash
 docker-compose up --build
 ```
 
@@ -55,13 +73,8 @@ This command will:
 - Start a PostgreSQL container (`db`) on port `5432`
 - Start the application container (`app`) on port `8080`
 
-### 2. Access the Service
-
-Once the application is running, you can access the API at:
-
-```
-http://localhost:8080
-```
+The service will be available at:  
+[http://localhost:8080](http://localhost:8080)
 
 ### 3. Interacting with the API
 
@@ -161,6 +174,12 @@ target/music-metadata-service-0.0.1-SNAPSHOT.jar
 ```bash
 docker-compose up --build
 ```
+
+This command will:
+
+- Build the Spring Boot application into a Docker image
+- Start a PostgreSQL container (`db`) on port `5432`
+- Start the application container (`app`) on port `8080`
 
 The service will be available at:  
 [http://localhost:8080](http://localhost:8080)
